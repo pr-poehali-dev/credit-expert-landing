@@ -10,37 +10,37 @@ const ProgramSection = () => {
     {
       number: "02",
       title: "Работа с банками",
-      description: "Партнёрство с банками, получение аккредитации, оформление сделок"
+      description: "Как заключать партнёрские договоры, получать лучшие условия и высокие комиссии"
     },
     {
       number: "03",
-      title: "Андеррайтинг",
-      description: "Анализ платёжеспособности, проверка документов, оценка рисков"
+      title: "Анализ клиента",
+      description: "Оценка платёжеспособности, подбор оптимального кредитного продукта"
     },
     {
       number: "04",
-      title: "Продажи и переговоры",
-      description: "Скрипты продаж, работа с возражениями, закрытие сделок"
+      title: "Сопровождение сделки",
+      description: "Подготовка документов, взаимодействие с банком, ведение до одобрения"
     },
     {
       number: "05",
-      title: "Поиск клиентов",
-      description: "Прямые и рекламные каналы, холодные звонки, реклама в интернете"
+      title: "Юридические аспекты",
+      description: "Договоры, защита интересов, работа со сложными случаями"
     },
     {
       number: "06",
-      title: "Юридические аспекты",
-      description: "Договоры, защита интересов, работа с претензиями"
+      title: "Маркетинг и продажи",
+      description: "Привлечение клиентов через соцсети, рекламу, партнёрства и рекомендации"
     },
     {
       number: "07",
       title: "Автоматизация",
-      description: "CRM-системы, сервисы для брокеров, автоворонки продаж"
+      description: "CRM-системы, шаблоны документов, автоворонки для экономии времени"
     },
     {
       number: "08",
       title: "Масштабирование",
-      description: "Найм сотрудников, построение команды, выход на 1+ млн в месяц"
+      description: "Создание команды, выход на крупных клиентов, увеличение оборота"
     }
   ];
 
@@ -54,18 +54,12 @@ const ProgramSection = () => {
           </p>
         </div>
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-          {modules.map((module, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+          {modules.map((module) => (
+            <Card key={module.number} className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center text-xl font-bold shrink-0">
-                    {module.number}
-                  </div>
-                  <div>
-                    <CardTitle className="mb-2">{module.title}</CardTitle>
-                    <CardDescription>{module.description}</CardDescription>
-                  </div>
-                </div>
+                <div className="text-5xl font-bold text-primary/20 mb-2">{module.number}</div>
+                <CardTitle>{module.title}</CardTitle>
+                <CardDescription className="text-base">{module.description}</CardDescription>
               </CardHeader>
             </Card>
           ))}
